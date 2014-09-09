@@ -1,0 +1,174 @@
+.todo-popup {
+    width: 180px;
+    font-size: 12px;
+    font-family: tahoma, Arial, sans-serif;
+    color: #333538;
+}
+.todo-popup a, .todo-popup input, .todo-popup button {
+    font-size: 10px;
+}
+.todo-popup input, .todo-popup textarea {
+    outline: none;
+    font-family: tahoma, Arial, sans-serif;
+}
+.todo-popup a {
+  color: #4383c6;
+}
+.todo-item {
+    position: fixed;
+    min-height: 50px;
+    min-width: 125px;
+    background: white;
+    z-index: 10000;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+}
+.todo-item:hover{
+    z-index: 10001;
+}
+.todo-item.today-deadline {
+    border: 1px solid #c75c5c;
+}
+.width-regulator {
+    position: absolute;
+    z-index: 9;
+    top:0;
+    right: -2px;
+    margin: auto;
+    width: 3px;
+    height: 98%;
+    cursor: w-resize
+}
+.todo-item-info {
+    position: relative;
+    background: #F7F7F7;
+    padding: 2px 3px 1px;
+    border-bottom: 1px solid #cdcdcd;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    height: 18px;
+    z-index: 10;
+}
+input.todo-item-complete {
+    margin: 3px 10px 0 3px;
+    float: left;
+}
+.datetimepicker-dropdown-menu {
+    float: left;
+    text-align: center;
+}
+a.datetimepicker-toggler {
+    float: left;
+    display: block;
+    line-height: 18px !important;
+    outline: none;
+    color: #333538;
+}
+.today-deadline a.datetimepicker-toggler {
+    color: #c75c5c;
+}
+.icon-calendar {
+    float: left;
+    display: block;
+    padding: 14px 15px 0 0;
+    cursor: pointer;
+    margin: 2px 3px 0 0;
+    background: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/trash-and-calendar.png') top left no-repeat;
+    background-size: auto 13px;
+}
+.open > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    width: 100%;
+    margin: 5px auto 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10002;
+    display: none;
+    float: left;
+    min-width: 125px;
+    max-width: 200px;
+    padding: 5px 0px;
+    list-style: none;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    background-clip: padding-box;
+}
+.datetimepicker td, .datetimepicker th {
+    padding: 0;
+    height: 17px;
+}
+.todo-item-remove {
+    padding: 14px 14px 0 0;
+    cursor: pointer;
+    float: right;
+    margin: 2px 3px 0 0;
+    background: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/trash-and-calendar.png') top right no-repeat;
+    background-size: auto 13px;
+}
+.todo-item-text {
+    position: relative;
+    min-width: 120px;
+    padding: 2px 5px;
+    min-height: 30px;
+    height: auto;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.notification-wrapper {
+    position: relative;
+    z-index: 10;
+    background: #F7F7F7;
+    border-radius: 0 0 4px 4px;
+}
+.todo-item-notification:first-child {
+    border-top: 1px solid #cdcdcd;
+}
+.notification-icon {
+    float: left;
+    height: 14px;
+    width: 15px;
+    margin: 3px 5px 3px 5px;
+    background: no-repeat center center transparent;
+    background-size: auto 13px;
+}
+.notification-icon-standart {
+    background-image: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/notification-icon-standart.png');
+}
+.notification-icon-warning {
+    background-image: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/notification-icon-warning.png');
+}
+.notification-icon-loading {
+    background-image: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/notification-icon-loading.gif');
+}
+.notification-text {
+    line-height: 20px;
+}
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+.glyphicon-arrow-left{
+    padding: 16px 13px 0 0;
+    background: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/arrows.png') top left no-repeat;
+}
+.glyphicon-arrow-right{
+    padding: 16px 13px 0 0;
+    background: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/arrows.png') top right no-repeat;
+}

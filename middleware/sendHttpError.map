@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "sendHttpError.js",
+  "sourceRoot": "",
+  "sources": [
+    "sendHttpError.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,CAAA,CAAiB,CAAA,EAAX,CAAN,EAAkB;CAChB,EAAG,CAAH,CAAoB,IAAC,IAArB;CACE,EAAG,EAAa,CAAhB;CACA,EAAM,CAAH,CAAuC,CAA1C,CAAmB,SAAnB,EAAmB;CACb,EAAD,CAAH,CAAA,UAAA;MADF,EAAA;CAGM,CAAgB,CAAjB,GAAH,CAAA,QAAA;CAAoB,CAAO,GAAN,KAAA;CAHvB,SAGE;QALgB;CAApB,IAAoB;CAMpB,GAAA,OAAA;CAPF,EAAiB;CAAjB"
+}

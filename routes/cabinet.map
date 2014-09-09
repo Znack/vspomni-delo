@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "cabinet.js",
+  "sourceRoot": "",
+  "sources": [
+    "cabinet.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,CAAA,CAAA,CAAc,GAAP,EAAQ;AACN,CAAP,EAAU,CAAV;CACE,EAAU,KAAH,KAAA;MADT;CAEA,EAAU,GAAH,GAAA,EAAA;CAHT,EAAc;CAAd"
+}

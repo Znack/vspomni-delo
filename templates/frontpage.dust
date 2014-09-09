@@ -1,0 +1,147 @@
+{>"layout/base"/}
+
+
+{<title}Заметки на полях Вконтакте - расширение для Chrome{/title}
+
+{<extra_styles}
+  <link rel="stylesheet" href="/css/frontpage.css?3"/>
+{/extra_styles}
+{<extra_scripts}
+  <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery.slides.min.js"></script>
+  <script type="text/javascript" src="/js/site/frontpage/init.js"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+{/extra_scripts}
+
+{<content}
+  <div class="frontpage-upper-panel">
+    <div class="frontpage-upper-panel-in centered-block">
+      <div class="left-column service-info">
+          <img src="img/logo.png" class="logo" /> Вспомни дело
+      </div>
+      <div class="right-column upper-menu">
+        <div data-destination="frontpage-extension" class="upper-menu-item active">Расширение</div>
+        <div data-destination="frontpage-instruction" class="upper-menu-item">Инструкция</div>
+        <div data-destination="frontpage-contacts" class="upper-menu-item">Контакты</div>
+        {?user}
+          <div class="upper-menu-item simple">{user.displayName}</div>
+          <div class="upper-menu-item"><a href="/cabinet">Ваш кабинет</a></div>
+        {:else}
+          <div class="upper-menu-item"><img class="login-btn" src="img/login-btn.png" /><a href='/auth/vkontakte'>Войти</a></div>
+        {/user}
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </div>
+
+  <div class="frontpage-extension content-block" id="frontpage-extension">
+    <div class="frontpage-extension-in centered-block">
+      <p class="block-title">Расширение для Google Chrome</p>
+      <p class="extension-link-block"><a href="https://chrome.google.com/webstore/detail/%D0%B2%D1%81%D0%BF%D0%BE%D0%BC%D0%BD%D0%B8-%D0%B4%D0%B5%D0%BB%D0%BE-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BF/djibejkjnciejcldejbajiihmickgloe" target="_blank" class="extension-link">Установить расширение</a></p>
+      <div style="clear: both"></div>
+      <div class="extension-screen"></div>
+    </div>
+  </div>
+
+  <div class="frontpage-instruction content-block" id="frontpage-instruction">
+    <div class="frontpage-instruction-in centered-block">
+      <p class="block-title">Инструкция по установке расширения</p>
+      <div class="instructions-slider" id="instructions-slider">
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-1.png" alt='Пройдите на страницу расширения в магазине Chrome и нажмите кнопку "Бесплатно"' title='Пройдите на страницу расширения в магазине Chrome и нажмите кнопку "Бесплатно"'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Для добавления расширения в свой браузер кликните на кнопку <strong>"Бесплатно"</strong> в правом верхнем углу.</p>
+          </div>
+        </div>
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-2.png" alt='Во всплывающем окошке подтвердите установку расширения.' title='Во всплывающем окошке подтвердите установку расширения.'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Во всплывающем окошке <strong>подтвердите установку</strong> расширения.</p>
+          </div>
+        </div>
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-3.png" alt='Пройдите на свою страницу Вконтакте и найдите в правом верхнем углу браузера иконку расширения. Если её нет, потяните за правую границу адресной строки.' title='Пройдите на свою страницу Вконтакте и найдите в правом верхнем углу браузера иконку расширения. Если её нет, потяните за правую границу адресной строки.'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Пройдите на свою страницу Вконтакте, <span class="stand-out">обновите её</span> и найдите в правом верхнем углу браузера иконку расширения. <strong>Если её нет</strong>, потяните влево за правую границу адресной строки.</p>
+          </div>
+        </div>
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-4.png" alt='Находясь на своей странице Вконтакте, нажмите иконку расширения и кликните по кнопке "Создать новое дело".' title='Находясь на своей странице Вконтакте, нажмите иконку расширения и кликните по кнопке "Создать новое дело".'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Находясь на своей странице Вконтакте, нажмите иконку расширения и кликните по кнопке <strong>"Создать новое дело"</strong>.</p>
+          </div>
+        </div>
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-5.png" alt='Напишите текст нужного вам дела, поставьте дату завершения, отрегулируйте ширину и переместите на удобную позицию новую заметку.' title='Напишите текст нужного вам дела, поставьте дату завершения, отрегулируйте ширину и переместите на удобную позицию новую заметку.'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Напишите текст нужного вам дела, поставьте дату завершения, отрегулируйте ширину и переместите на удобную позицию новую заметку.</p>
+          </div>
+        </div>
+        <div class="one-step">
+          <div class="step-screenshot">
+            <img src="/img/step-screenshot-6.png" alt='Снова нажмите на иконку расширения и кликните по кнопке "Поделиться Вконтакте". Не забудьте добавить комментарий, насколько клёвое расширение вы нашли :)' title='Снова нажмите на иконку расширения и кликните по кнопке "Поделиться Вконтакте". Не забудьте добавить комментарий, насколько клёвое расширение вы нашли :)'/>
+          </div>
+          <div class="step-description">
+            <p class="step-description-text">Снова нажмите на иконку расширения и кликните по кнопке <strong>"Поделиться Вконтакте"</strong>. Не забудьте добавить комментарий, насколько клёвое расширение вы нашли :)</p>
+          </div>
+        </div>
+      </div>
+      <div class="separatop"></div>
+    </div>
+  </div>
+
+  <div class="frontpage-contacts content-block" id="frontpage-contacts">
+    <div class="frontpage-contacts-in centered-block">
+      <div class="social-share">
+        <!-- VK Widget -->
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+          VK.Widgets.Group("vk_groups", {mode: 0, width: "720", height: "130", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 72888081);
+        </script>
+      </div>
+      <p class="block-title">Контактная информация</p>
+      <p class="block-subtitle">Смело сообщайте о любых идеях или ошибках</p>
+      <div class="connect-info">
+        <div class="one-contact">
+          <div class="one-contact-text-wrapper">
+            <div class="one-contact-text">Разработчик: <a href="http://vk.com/znack" target="_blank">Сергей Черепанов</a></div>
+          </div>
+          <div class="contact-icon-wrapper">
+            <img class="contact-icon" src="img/dev-icon.png" />
+          </div>
+          <div style="clear: both"></div>
+        </div>
+        <div class="one-contact right-oriented">
+          <div class="one-contact-text-wrapper  right-oriented">
+            <div class="one-contact-text">Дизайнер: <a href="http://vk.com/julya_key09" target="_blank">Юлия Ключарова</a></div>
+          </div>
+          <div class="contact-icon-wrapper">
+            <img class="contact-icon" src="img/design-icon.png" />
+          </div>
+          <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frontpage-footer">
+    <div class="frontpage-footer-in centered-block">
+      <div class="footer-column left-oriented">&copy; 2014, Вспомни Дело. Все права защищены.</div>
+      <div class="footer-column right-oriented">Разработка от New Integral</div>
+      <div style="clear: both"></div>
+    </div>
+  </div>
+  {/content}

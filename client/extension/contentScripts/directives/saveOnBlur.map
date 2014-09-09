@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "saveOnBlur.js",
+  "sourceRoot": "",
+  "sources": [
+    "saveOnBlur.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,CAAA,IAAA,CAAO,EAAP,GAAA,SAAA;GACyB,EAAA,IAAA;CACvB,YAAO;CAAA,CACG,CADH,KACP;CADO,CAEE,KAAT,CAAA,CAFO;CAAA,CAGD,CAAA,CAAN,CAAM,EAAA,CAAN,CAAO;CACG,CAAR,CAAmB,GAAnB,CAAO,EAAa,QAApB;CACQ,GAAN,CAAK,KAAL,SAAA;CADF,UAAmB;CAJd,QAGD;CAJiB,OACvB;CADsB,IAAC;CADzB,GAAA;CAAA"
+}

@@ -1,0 +1,51 @@
+<div class="todo-item"
+     ng-repeat="todo in todos"
+     ng-init="newDeadLineHandler = createDeadLineHandler(todo)"
+     ng-class="{'today-deadline': isDeadLineToday(todo)}"
+     ng-form="todo-form-{{todo['_id']}}"
+  >
+  <div class="todo-item-info">
+    <div class="datetimepicker-dropdown-menu">
+      <a class="datetimepicker-toggler" id="datetimepicker-label-{{todo['_id']}}" role="button" data-toggle="dropdown" data-target="#" href="">
+        <span class="icon-calendar" title="Установить дату"></span>
+        <span class="toggler-text" ng-hide="todo.deadLine">Без даты</span>
+        <span class="toggler-text" ng-show="todo.deadLine">{{ todo.deadLine | date:'yyyy-MM-dd HH:mm' }}</span>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="datetimepicker-label-{{todo['_id']}}">
+      <datetimepicker data-ng-model="todo.deadLine"
+                      data-on-set-time="newDeadLineHandler"
+                      data-datetimepicker-config="{
+                                      dropdownSelector: '#datetimepicker-label-{{todo['_id']}}',
+                                      weekStart: 1
+                                    }"></datetimepicker>
+      </ul>
+      <div style="clear: both"></div>
+    </div>
+    <div class="active-todo-actions" ng-hide="todo.removed">
+        <span class="icon-remove todo-item-remove js-todo-item-remove"
+              ng-click="removeTodo(todo)" title="Удалить"></span>
+        <span class="todo-item-default-position js-todo-item-default-position"
+              ng-click="setDefaultPosition(todo)" title="Вернуть в исходную позицию"></span>
+        <div style="clear: both"></div>
+    </div>
+    <div class="removed-todo-actions" ng-show="todo.removed">
+      <span class="todo-item-recovery js-todo-item-recovery"
+            ng-click="recoveryTodo(todo)" title="Восстановить дело из удаленных"></span>
+      <div style="clear: both"></div>
+    </div>
+  </div>
+  <div class="todo-item-text js-todo-item-text"
+      contenteditable="true"
+      ng-model="todo.title"
+      ng-blur="updateTodo(todo)"
+      strip-br="true"></div>
+  <div class="notification-wrapper">
+    <div class="todo-item-notification {{notification['type']}}-type-notification" ng-repeat="notification in todo.notifier().all()">
+      <div class="notification-icon notification-icon-{{notification['type']}}" ng-show="notification.type"></div>
+      <div class="notification-text">
+        {{ notification.text }}
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </div>
+</div>

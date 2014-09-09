@@ -1,0 +1,52 @@
+{>"layout/base"/}
+
+
+{<title}Главная{/title}
+
+
+{<extra_styles}
+  <link rel="stylesheet" href="/css/lib/datetimepicker.css"/>
+  <link rel="stylesheet" href="/css/cabinet.css?3"/>
+{/extra_styles}
+{<extra_scripts}
+  {?user}
+  <script src="/js/lib/angular-1.2.17/angular.min.js"></script>
+  <script src="/js/lib/angular-1.2.17/angular-resource.min.js"></script>
+  <script src="/js/lib/angular-1.2.17/angular-cookies.min.js"></script>
+  <script src="/js/lib/angular-1.2.17/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="/js/lib/moment.min.js"></script>
+  <script type="text/javascript" src="/js/lib/datetimepicker.js"></script>
+  <script src="/js/cabinet/init.js"></script>
+  {/user}
+{/extra_scripts}
+
+
+{<content}
+  {?user}
+<div class="cabinet" ng-app="todo">
+    <div class="top-navigation">
+      <div class="top-navigation-in">
+        {>"partials/topNavigation" /}
+      </div>
+    </div>
+    <div class="notification-about-extension">
+    </div>
+    <div class="todo-frame-content" ng-controller="TodoListCtrl">
+      <div class="todolist">
+        {>"partials/todoItems" /}
+      </div>
+      <div class="todolist-manager">
+        <p class="manager-element manager-element-button js-manager-element js-create-todo" ng-click="createTodo()">Создать новое дело</p>
+        <div class="manager-menu">
+          <p class="manager-menu-item  js-manager-menu-item  js-filter-active" ng-class="{active: showActive()}" ng-click="showActive(true)">Активные</p>
+          <p class="manager-menu-item js-manager-menu-item  js-filter-removed" ng-class="{active: !showActive()}" ng-click="showActive(false)">Удаленные</p>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </div>
+  {:else}
+    <p>Добро пожаловать, анонимный человек.</p>
+    <p>Зарегистрируйся с помощью <a href='/auth/vkontakte'>Вконтакте</a></p>
+  {/user}
+{/content}

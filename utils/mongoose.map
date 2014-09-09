@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "mongoose.js",
+  "sourceRoot": "",
+  "sources": [
+    "mongoose.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,UAAA;;CAAA,CAAA,CAAW,IAAA,CAAX,EAAW;;CAAX,CACA,CAAS,GAAT,CAAS,CAAA;;CADT,CAGA,CAAiB,GAAM,CAAvB,CAAQ,MAAS,IAA4B;;CAH7C,CAKA,CAAiB,GAAX,CAAN,CALA;CAAA"
+}

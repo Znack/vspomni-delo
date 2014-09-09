@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "isLoggedIn.js",
+  "sourceRoot": "",
+  "sources": [
+    "isLoggedIn.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,CAAA,CAAiB,CAAA,EAAX,CAAN,EAAkB;CAEhB,EAAO,CAAP,WAAI;CACF,GAAO,SAAA;MADT;CAGA,EAAU,KAAH,GAAA;CALT,EAAiB;CAAjB"
+}

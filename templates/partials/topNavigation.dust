@@ -1,0 +1,17 @@
+<img class="company-logo" src="/img/logo.png" />
+<p class="main-title">
+  <a href="/?no_redirect">Вспомни Дело</a>
+</p>
+{?user}
+  <p class="sub-header user-info">
+    <a class="upper-menu-item" href="/?no_redirect#frontpage-instruction">Инструкция</a>
+    <span class="upper-menu-item display-name">{user.displayName}</span>
+    <a class="upper-menu-item pull-right logout-link" href="/logout">Выйти</a>
+  </p>
+{:else}
+  <p class="sub-header anonymous">
+    <a href="/?no_redirect">Инструкция</a>
+    <a class="login-link" href="/auth/vkontakte" title="Login">Войти через Вконтакте</a>
+  </p>
+{/user}
+<div style="clear: both"></div>
