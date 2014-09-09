@@ -1,0 +1,24 @@
+{
+  "env": "development",
+  "port": 3000,
+  "domain": "http://vspomni-delo.ru/",
+  "allowedDomains": ["*"],
+  "mongoose":{
+    "uri": "mongodb://localhost/todo",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session":{
+    "secret": "secret",
+    "key": "sid"
+  },
+  "passport": {
+    "vkontakteAppId": "4412700",
+    "vkontakteAppSecret": "Q6eMjp8xkvjxdXMncOMt"
+  }
+}

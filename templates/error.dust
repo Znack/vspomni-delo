@@ -1,0 +1,7 @@
+{>"layout/base"/}
+
+{<title}Извините, произошла ошибка{/title}
+
+{<content}
+  <p>{error.message}</p>
+{/content}

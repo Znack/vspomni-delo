@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Вспомни дело</title>
+</head>
+<body>
+  <div id="frame-template">
+    <div class="todo-popup">
+      <div class="todo-frame-content" ng-controller="TodoListCtrl">
+        <div class="todo-item"
+             ng-repeat="todo in todos"
+             ng-init="newDeadLineHandler = createDeadLineHandler(todo)"
+             ng-form="todo-form-{{todo['_id']}}"
+             ng-class="{'today-deadline': isDeadLineToday(todo)}"
+             width-configurable
+        >
+          <div class="todo-item-info" todo-panel>
+            <div class="datetimepicker-dropdown-menu">
+              <a class="datetimepicker-toggler" id="datetimepicker-label-{{todo['_id']}}" role="button" data-toggle="dropdown" data-target="#" href="">
+                <span class="icon-calendar" title="Установить дату"></span>
+                <span class="toggler-text" ng-hide="todo.deadLine">Без даты</span>
+                <span class="toggler-text" ng-show="todo.deadLine">{{ todo.deadLine | date:'yyyy-MM-dd HH:mm' }}</span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="datetimepicker-label-{{todo['_id']}}">
+                <datetimepicker data-ng-model="todo.deadLine"
+                                data-on-set-time="newDeadLineHandler"
+                                data-datetimepicker-config="{
+                                  dropdownSelector: '#datetimepicker-label-{{todo['_id']}}',
+                                  weekStart: 1
+                                }"></datetimepicker>
+              </ul>
+              <div style="clear: both"></div>
+            </div>
+            <span class="icon-remove todo-item-remove js-todo-item-remove"
+              ng-click="removeTodo(todo)"></span>
+            <div style="clear: both"></div>
+          </div>
+          <div
+            save-on-blur
+            contenteditable="true"
+            class="todo-item-text js-todo-item-text"
+            ng-model="todo.title"
+            strip-br="true"></div>
+          <div class="notification-wrapper">
+            <div class="todo-item-notification {{notification.type}}-type-notification" ng-repeat="notification in todo.notifier().all()">
+              <div class="notification-icon notification-icon-{{notification['type']}}" ng-show="notification.type"></div>
+              <div class="notification-text">
+                {{ notification.text }}
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/lib/google-analytics-bundle.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular-resource.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="js/background.js"></script>
+</body>
+</html>

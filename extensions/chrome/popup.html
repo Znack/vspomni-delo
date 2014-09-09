@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Вспомни дело</title>
+  <link rel="stylesheet" href='/css/lib/bootstrap.min.css'>
+  <link rel="stylesheet" href='/css/popup.css'>
+
+  <script type="text/javascript" src="js/lib/google-analytics-bundle.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+</head>
+<body>
+  <div id="content">
+    <h1 id="title"><a href="http://vspomni-delo.ru/">Вспомни дело</a></h1>
+    <div id="authorized-content">
+      <div id="account-panel">
+        <div id="display-name"></div>
+        <div class="logout-btn"><a href="http://vspomni-delo.ru/logout">Выйти</a></div>
+        <div style="clear: both"></div>
+      </div>
+      <div id="todos-panel">
+        <div class="create-todo-btn js-create-todo-btn">Создать новое дело</div>
+      </div>
+      <div class="share-panel">
+        <p class="share-panel-title">Помогите своим друзьям &#8211; познакомьте иx с приложением :)</p>
+        <div class="vk-share-btn">
+          <a href="http://vk.com/share.php?url=http://vspomni-delo.ru&title=Вспомни&#32;Дело&description=Добавляет&#32;заметки&#32;на&#32;полях&#32;ВКонтакте&#32;&#8211;&#32;заполните&#32;пустое&#32;место&#32;на&#32;полях&#32;важными&#32;делами&image=http://vspomni-delo.ru/img/favicon.png" target="_blank">Поделиться Вконтакте</a>
+        </div>
+      </div>
+    </div>
+    <div id="anonymous-content">
+      <div class="info-popup anonymous">
+        <p>Вам нужно <a target="_blank" href="http://vspomni-delo.ru/auth/vkontakte">авторизоваться через Вконтакте</a></p>
+        <p>После авторизации, пожалуйста, <a href onclick="location.reload(true);">обновите страницу</a>.</p>
+      </div>
+    </div>
+    <div id="incorrect-window-content">
+      <div class="info-popup incorrect-window">
+        <p>Извините, но на текущем сайте расширение не работает. Зато отсюда вы можете посетить наш чудо-ресурс <a target="_blank" href="http://vspomni-delo.ru/">Вспомни Дело</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

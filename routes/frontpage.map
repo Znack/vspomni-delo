@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "frontpage.js",
+  "sourceRoot": "",
+  "sources": [
+    "frontpage.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,EAAA,GAAA;;CAAA,CAAA,CAAA,EAAM,EAAA;;CAAN,CAEA,CAAA,CAAc,GAAP,EAAQ;CACb,IAAA,GAAA;CAAA,CAA2B,CAAnB,CAAR,CAAA;AACoB,CAApB,EAAM,CAAN,CAAoB,QAAC;CACnB,EAAU,KAAH,EAAA,GAAA;MADT;CAGE,EAAU,GAAH,KAAA,EAAA;MALG;CAFd,EAEc;CAFd"
+}

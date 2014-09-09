@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "sessionStore.js",
+  "sourceRoot": "",
+  "sources": [
+    "sessionStore.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,8BAAA;;CAAA,CAAA,CAAW,IAAA,CAAX,QAAW;;CAAX,CACA,CAAiB,IAAA,OAAjB,GAAiB;;CADjB,CAEA,CAAa,IAAA,GAAb,IAAa,CAAA;;CAFb,CAIA,CAAqB,CAAA,EAAf,CAAN,GAAqB;CAAW,CAAsB,EAArB,IAA6B,EAA9B,SAAC;CAJjC,GAIqB;CAJrB"
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "passUserToLocals.js",
+  "sourceRoot": "",
+  "sources": [
+    "passUserToLocals.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,CAAA,CAAiB,CAAA,EAAX,CAAN,EAAkB;CAChB,EAAM,CAAN;CACE,EAAG,CAAH,EAAA;MADF;CAGE,EAAG,CAAH,EAAA;MAHF;CAIA,GAAO,OAAA;CALT,EAAiB;CAAjB"
+}

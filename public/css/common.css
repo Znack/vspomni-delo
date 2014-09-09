@@ -1,0 +1,37 @@
+body {
+    font: 14px Tahoma, Helvetica, Arial, sans-serif;
+    color: #333538;
+}
+input, textarea, div, a {
+    outline: none;
+}
+a {
+    color: #4383c6;
+}
+
+.logout-link, .logout-link:hover {
+    color: #4383c6;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+.glyphicon-arrow-left{
+    padding: 16px 13px 0 0;
+    background: url('../img/arrows.png') top left no-repeat;
+}
+.glyphicon-arrow-left:before{
+    content: ""
+}
+.glyphicon-arrow-right{
+    padding: 16px 13px 0 0;
+    background: url('../img/arrows.png') top right no-repeat;
+}
+.glyphicon-arrow-right:before{
+    content: ""
+}
