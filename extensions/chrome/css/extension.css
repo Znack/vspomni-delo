@@ -112,7 +112,7 @@ a.datetimepicker-toggler {
     padding: 14px 14px 0 0;
     cursor: pointer;
     float: right;
-    margin: 2px 3px 0 0;
+    margin: 2px 0 0;
     background: url('chrome-extension://djibejkjnciejcldejbajiihmickgloe/img/trash-and-calendar.png') top right no-repeat;
     background-size: auto 13px;
 }

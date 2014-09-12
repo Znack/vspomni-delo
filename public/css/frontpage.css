@@ -122,7 +122,7 @@
     margin: 40px 0 0;
 }
 .step-screenshot {
-    float: left;
+    margin: 0 auto;
     width: 525px;
     height: 295px;
 }
@@ -130,15 +130,12 @@
     max-width: 100%;
 }
 .step-description {
-    line-height: 295px;
-    height: 295px;
-    overflow: hidden;
+    margin: 20px 0;
 }
 .step-description-text {
-    display: inline-block;
-    vertical-align: middle;
     margin: 0 0 0 15px;
     line-height: 1.2;
+    text-align: center;
 }
 .step-description-text .stand-out{
     font-size: 17px;
@@ -148,8 +145,8 @@
     display: none !important;
 }
 .slidesjs-pagination {
-    width: 525px;
-    margin: 30px 0 0 110px;
+    width: 307px;
+    margin: 30px auto 0;
     list-style: none;
 }
 .slidesjs-pagination-item a{
@@ -176,7 +173,9 @@
 .separatop {
     position: absolute;
     width: 310px;
-    left: 108px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 35px;
     border-top: 2px solid #5e7374;
 }
@@ -184,15 +183,16 @@
     padding: 40px 0;
     background: #efd37e;
 }
-.frontpage-contacts .block-title {
-    margin: 30px 0 0;
+.social-share {
+    width: 300px;
+    margin: 40px 0 0;
+    float: left;
 }
 .connect-info {
-    margin: 30px 0 0;
+    overflow: hidden;
+    margin: 70px 0 0 50px;
 }
 .one-contact {
-    float: left;
-    width: 50%;
 }
 .contact-icon-wrapper {
     float: left;

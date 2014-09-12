@@ -1,7 +1,7 @@
 $(()->
   $("#instructions-slider").slidesjs({
     width: 720,
-    height: 295,
+    height: 365,
     navigation: false,
     pagination: {
       effect: "fade"
