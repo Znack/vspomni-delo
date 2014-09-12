@@ -4,7 +4,7 @@
 {<title}Заметки на полях Вконтакте - расширение для Chrome{/title}
 
 {<extra_styles}
-  <link rel="stylesheet" href="/css/frontpage.css?3"/>
+  <link rel="stylesheet" href="/css/frontpage.css?4"/>
 {/extra_styles}
 {<extra_scripts}
   <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
