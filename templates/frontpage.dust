@@ -103,37 +103,37 @@
 
   <div class="frontpage-contacts content-block" id="frontpage-contacts">
     <div class="frontpage-contacts-in centered-block">
+      <p class="block-title">Контактная информация</p>
+      <p class="block-subtitle">Смело сообщайте о любых идеях или ошибках</p>
       <div class="social-share">
         <!-- VK Widget -->
         <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
         <div id="vk_groups"></div>
         <script type="text/javascript">
-          VK.Widgets.Group("vk_groups", {mode: 0, width: "720", height: "130", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 72888081);
+          VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 72888081);
         </script>
       </div>
-      <p class="block-title">Контактная информация</p>
-      <p class="block-subtitle">Смело сообщайте о любых идеях или ошибках</p>
       <div class="connect-info">
         <div class="one-contact">
-          <div class="one-contact-text-wrapper">
-            <div class="one-contact-text">Разработчик: <a href="http://vk.com/znack" target="_blank">Сергей Черепанов</a></div>
-          </div>
           <div class="contact-icon-wrapper">
             <img class="contact-icon" src="img/dev-icon.png" />
           </div>
+          <div class="one-contact-text-wrapper">
+            <div class="one-contact-text">Разработчик: <a href="http://vk.com/znack" target="_blank">Сергей Черепанов</a></div>
+          </div>
           <div style="clear: both"></div>
         </div>
-        <div class="one-contact right-oriented">
-          <div class="one-contact-text-wrapper  right-oriented">
-            <div class="one-contact-text">Дизайнер: <a href="http://vk.com/julya_key09" target="_blank">Юлия Ключарова</a></div>
-          </div>
+        <div class="one-contact">
           <div class="contact-icon-wrapper">
             <img class="contact-icon" src="img/design-icon.png" />
           </div>
+          <div class="one-contact-text-wrapper">
+            <div class="one-contact-text">Дизайнер: <a href="http://vk.com/julya_key09" target="_blank">Юлия Ключарова</a></div>
+          </div>
           <div style="clear: both"></div>
         </div>
-        <div style="clear: both"></div>
       </div>
+      <div style="clear: both"></div>
     </div>
   </div>
 
