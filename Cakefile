@@ -41,12 +41,15 @@ task "browserify", "Browserify special js files", (options)->
     when 'background'
       source = 'public/js/extension/background/background.js'
       target = 'extensions/chrome/js/background.js'
+      break
     when 'popup'
       source = 'public/js/extension/popup/popup.js'
       target = 'extensions/chrome/js/popup.js'
+      break
     when 'contentScript'
       source = 'public/js/extension/contentScripts/initExtension.js'
       target = 'extensions/chrome/js/todoExtension.js'
+      break
     else
       throw new Error('Try browserify invalid configured file')
   options = [source, '-o', target]
