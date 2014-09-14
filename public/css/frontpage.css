@@ -124,7 +124,7 @@
 .step-screenshot {
     margin: 0 auto;
     width: 720px;
-    height: 405px;
+    height: 435px;
 }
 .step-screenshot img {
     max-width: 100%;
@@ -180,7 +180,7 @@
     border-top: 2px solid #5e7374;
 }
 .frontpage-contacts {
-    padding: 40px 0;
+    padding: 40px 0 70px;
     background: #efd37e;
 }
 .social-share {

@@ -4,7 +4,7 @@
     var $upperMenu, $upperMenuItems, $upperPanel;
     $("#instructions-slider").slidesjs({
       width: 720,
-      height: 470,
+      height: 500,
       navigation: false,
       pagination: {
         effect: "fade"
