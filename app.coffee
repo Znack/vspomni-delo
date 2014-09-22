@@ -32,6 +32,7 @@ app.use(expressSession({
   secret: config.get("session:secret")
   key: config.get("session:key")
   store: sessionStore
+  cookie: {maxAge: 2592000000} # 30*24*60*60*1000 = 2592000000 = 30 days
 }))
 app.use(require('./middleware/sendHttpError'))
 app.use(passport.initialize())

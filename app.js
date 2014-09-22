@@ -58,7 +58,10 @@
   app.use(expressSession({
     secret: config.get("session:secret"),
     key: config.get("session:key"),
-    store: sessionStore
+    store: sessionStore,
+    cookie: {
+      maxAge: 2592000000
+    }
   }));
 
   app.use(require('./middleware/sendHttpError'));
