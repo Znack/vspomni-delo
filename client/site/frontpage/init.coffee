@@ -1,3 +1,5 @@
+detectExtension = require('../common.js').detectExtension
+
 $(()->
   $("#instructions-slider").slidesjs({
     width: 720,
@@ -15,7 +17,6 @@ $(()->
   });
 
   $upperPanel = $('.frontpage-upper-panel')
-  $upperMenu = $('.upper-menu')
   $upperMenuItems = $('.upper-menu-item')
   $(window).scroll ()->
     scrolled = $(window).scrollTop();
@@ -36,4 +37,9 @@ $(()->
       {
         scrollTop: document.getElementById(destination).offsetTop - $upperPanel.outerHeight() + 15
       }, 2000,'easeInOutExpo')
+
+  detectExtension((err, success)->
+    return null if err?
+    $('.extension-link-block .extension-link').text("Установлено").addClass('disable')
+  )
 )

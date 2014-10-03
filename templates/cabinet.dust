@@ -10,13 +10,13 @@
 {/extra_styles}
 {<extra_scripts}
   {?user}
-  <script src="/js/lib/angular-1.2.17/angular.min.js"></script>
-  <script src="/js/lib/angular-1.2.17/angular-resource.min.js"></script>
-  <script src="/js/lib/angular-1.2.17/angular-cookies.min.js"></script>
-  <script src="/js/lib/angular-1.2.17/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular-resource.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="/js/lib/angular-1.2.17/angular-sanitize.min.js"></script>
   <script type="text/javascript" src="/js/lib/moment.min.js"></script>
   <script type="text/javascript" src="/js/lib/datetimepicker.js"></script>
-  <script src="/js/cabinet/init.js"></script>
+  <script type="text/javascript" src="/js/site/cabinet.js"></script>
   {/user}
 {/extra_scripts}
 
@@ -29,7 +29,13 @@
         {>"partials/topNavigation" /}
       </div>
     </div>
-    <div class="notification-about-extension">
+    <div class="notification-about-extension" ng-controller="NotificationCtrl">
+      <div class="notification-about-extension-in" ng-show="notificationExtensionNotInstalled">
+        <div class="notification-close-btn"></div>
+        <p class="notification-title">Расширение для Google Chrome не установлено.</p>
+        <p class="notification-text">Наше расширение позволит вам добавлять заметки на сайт <a href="http://vk.com/" target="_blank">Вконтакте</a>.</p>
+        <p class="notification-text">Просто <a href="https://chrome.google.com/webstore/detail/%D0%B2%D1%81%D0%BF%D0%BE%D0%BC%D0%BD%D0%B8-%D0%B4%D0%B5%D0%BB%D0%BE-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BF/djibejkjnciejcldejbajiihmickgloe" target="_blank">установите расширение</a>, и вы сможете держать все свои дела на виду.</p>
+      </div>
     </div>
     <div class="todo-frame-content" ng-controller="TodoListCtrl">
       <div class="todolist">

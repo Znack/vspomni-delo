@@ -50,6 +50,14 @@ task "browserify", "Browserify special js files", (options)->
       source = 'public/js/extension/contentScripts/initExtension.js'
       target = 'extensions/chrome/js/todoExtension.js'
       break
+    when 'cabinet'
+      source = 'public/js/site/cabinet/init.js'
+      target = 'public/js/site/cabinet.js'
+      break
+    when 'frontpage'
+      source = 'public/js/site/frontpage/init.js'
+      target = 'public/js/site/frontpage.js'
+      break
     else
       throw new Error('Try browserify invalid configured file')
   options = [source, '-o', target]
@@ -62,5 +70,9 @@ task "packeverything", "Compily and Browserify all files", (options)->
   options.browserified = 'popup'
   invoke 'browserify'
   options.browserified = 'contentScript'
+  invoke 'browserify'
+  options.browserified = 'cabinet'
+  invoke 'browserify'
+  options.browserified = 'frontpage'
   invoke 'browserify'
 
