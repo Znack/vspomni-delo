@@ -9,6 +9,19 @@
 
   notificationControllers.controller('NotificationCtrl', [
     '$scope', function($scope) {
+      var isLocalStorageAvailable;
+      try {
+        $scope.notificationExtensionNotInstalledClosed = localStorage.getItem("notificationExtensionNotInstalledClosed") || false;
+        isLocalStorageAvailable = true;
+      } catch (_error) {
+        $scope.notificationExtensionNotInstalledClosed = false;
+      }
+      $scope.closeNotificationExtensionNotInstalled = function() {
+        $scope.notificationExtensionNotInstalledClosed = !$scope.notificationExtensionNotInstalledClosed;
+        if (isLocalStorageAvailable) {
+          return localStorage.setItem("notificationExtensionNotInstalledClosed", $scope.notificationExtensionNotInstalledClosed);
+        }
+      };
       return detectExtension(function(err, success) {
         if ((err != null) && err.isChrome) {
           return $scope.notificationExtensionNotInstalled = true;
