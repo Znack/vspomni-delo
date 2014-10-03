@@ -78,31 +78,32 @@
     float: right;
     width: 220px;
     height: 60px;
-    background: #c75c5c;
-    border-radius: 5px;
-    -webkit-transition: background 0.2s ease-out;
-    -moz-transition: background 0.2s ease-out;
-    -o-transition: background 0.2s ease-out;
-    transition: background 0.2s ease-out;
-}
-.extension-link-block:hover {
-    background: #d56767;
-}
-.extension-link-block:active {
-    background: #b45959;
 }
 .extension-link-block a {
     display: block;
     height: 100%;
     width: 100%;
+    background: #c75c5c;
+    border-radius: 5px;
     text-align: center;
     line-height: 60px;
     font-size: 16px;
     color: #fefeff;
     text-decoration: none;
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
 }
 .extension-link-block a:hover {
     text-decoration: none;
+    background: #d56767;
+}
+.extension-link-block a:active {
+    background: #b45959;
+}
+.extension-link-block a.disable {
+    background: #88BDF5;
 }
 .extension-screen {
     width: 720px;

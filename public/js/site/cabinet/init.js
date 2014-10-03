@@ -4,10 +4,10 @@
 
   require('./controllers/todo.js');
 
+  require('./controllers/notification.js');
+
   require('./directives/contenteditable.js');
 
-  require('./checkExtension.js');
-
-  angular.module('todo', ['ngResource', 'ngCookies', 'ui.bootstrap.datetimepicker', 'contenteditableDirective', 'todoServices', 'todoControllers']);
+  angular.module('todo', ['ngResource', 'ngCookies', 'ui.bootstrap.datetimepicker', 'contenteditableDirective', 'todoServices', 'todoControllers', 'notificationControllers']);
 
 }).call(this);

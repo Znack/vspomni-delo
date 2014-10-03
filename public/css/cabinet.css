@@ -27,6 +27,7 @@ body {
     z-index: 10;
     padding: 4px 0;
     border-bottom: 1px solid #e1e1e1;
+    min-width: 720px;
 }
 .top-navigation-in {
     width: 720px;
@@ -74,7 +75,55 @@ body {
 
 /*notification-about-extension starts*/
 .notification-about-extension {
-
+    min-width: 720px;
+    background: #c75c5c;
+}
+.notification-about-extension-in {
+    position: relative;
+    width: 720px;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: white;
+}
+.notification-close-btn {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+    color: #ff8b8b;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notification-close-btn:hover {
+    color: #ffafb8;
+}
+.notification-close-btn::after {
+    content: "+";
+    font-size: 22px;
+}
+.notification-title {
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 0 5px;
+}
+.notification-text {
+    font-size: 12px;
+    margin: 3px;
+}
+.notification-text a {
+    color: white;
+    text-decoration: underline;
+}
+.notification-text a:hover {
+    text-decoration: none;
+    color: white;
 }
 /*notification-about-extension ends*/
 
