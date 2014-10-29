@@ -6,8 +6,8 @@
 
   module.exports = function(response) {
     var notification;
-    if (response.resource instanceof Array) {
-      response.resource.forEach(function(todo) {
+    if (response instanceof Array) {
+      response.forEach(function(todo) {
         var notification;
         notification = new Notification();
         return todo.notifier = function() {
@@ -16,11 +16,11 @@
       });
     } else {
       notification = new Notification();
-      response.resource.notifier = function() {
+      response.notifier = function() {
         return notification;
       };
     }
-    return response.resource;
+    return response;
   };
 
 }).call(this);

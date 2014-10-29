@@ -34,7 +34,7 @@ checkAuth = (app)->
       app.tracker.sendEvent('Error in extension', 'Content script opened by anonymous', '')
 
 createApp = (app)->
-  chrome.runtime.sendMessage({backendName: "angularBackend", method: "getFrameTemplate"}, (response)->
+  chrome.runtime.sendMessage({backendName: "templateBackend", method: "getFrameTemplate"}, (response)->
     element = document.createElement('div')
     element.innerHTML = response.template
     body = document.getElementsByTagName('body')[0]

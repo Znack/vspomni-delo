@@ -31,7 +31,7 @@
         if (showNotifications) {
           allNotifications = _setLoadingStatus();
         }
-        return Todo.query(function(todos) {
+        return Todo.query().$promise.then(function(todos) {
           $scope.todos = todos;
           if (showNotifications) {
             return allNotifications.forEach(function(notification) {
@@ -53,8 +53,8 @@
       });
       $scope.createDeadLineHandler = function(todo) {
         return function(newDeadLine) {
-          todo.deadLine = newDeadLine;
-          return todo.$update();
+          todo.deadLine = moment(newDeadLine).utc().format();
+          return todo.update();
         };
       };
       $scope.isDeadLineToday = function(todo) {
@@ -69,6 +69,7 @@
         });
       };
       $scope.updateTodo = function(todo, callback, createNotification) {
+        var loadingNotification;
         if (callback == null) {
           callback = null;
         }
@@ -76,20 +77,21 @@
           createNotification = true;
         }
         if (createNotification) {
-          todo.notifier().add('Сохраняется...', 'loading');
+          loadingNotification = todo.notifier().add('Сохраняется...', 'loading');
         }
-        return todo.$update(function(todoData, getHeaders) {
+        return todo.update(function(todoData) {
           app.tracker.sendEvent('Todos', 'Update todo', createNotification ? "with notification" : "without notification");
           if (createNotification) {
+            loadingNotification.remove();
             todo.notifier().add('Сохранено', 'standart', $scope, 1000);
           }
           if (callback != null) {
-            return callback(todoData, getHeaders);
+            return callback(todoData);
           }
         });
       };
       return $scope.removeTodo = function(todo) {
-        todo.$remove();
+        todo.remove();
         app.tracker.sendEvent('Todos', 'Remove todo', '');
         return _removeItem($scope.todos, todo);
       };

@@ -37,3 +37,7 @@
   };
 
 }).call(this);
+
+/*
+//@ sourceMappingURL=background.map
+*/

@@ -1,6 +1,6 @@
-AngularBackend = require('./angularBackend.js')
+TemplateBackend = require('./templateBackend.js')
 AuthBackend = require('./authBackend.js')
-EmitterBackend = require('./emitterBackend.js')
+TodoServiceBackend = require('./todoServiceBackend.js')
 NotificationBackend = require('./notificationBackend.js')
 config = require('../common.js').config
 
@@ -24,8 +24,8 @@ chrome.runtime.onMessage.addListener(
 )
 
 backends = {
-  angularBackend: new AngularBackend(app)
+  templateBackend: new TemplateBackend(app)
   authBackend: new AuthBackend(app)
-  emitterBackend: new EmitterBackend(app)
+  todoServiceBackend: new TodoServiceBackend(app)
   notificationBackend: new NotificationBackend(app)
 }

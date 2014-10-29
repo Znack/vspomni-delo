@@ -1,5 +1,5 @@
 module.exports = (response)->
-  if response.resource instanceof Array and not response.resource.length
+  if response instanceof Array and not response.length
     chrome.runtime.sendMessage {
       backendName: "notificationBackend"
       method: 'create'

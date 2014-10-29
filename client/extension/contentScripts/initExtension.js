@@ -60,7 +60,7 @@
 
   createApp = function(app) {
     return chrome.runtime.sendMessage({
-      backendName: "angularBackend",
+      backendName: "templateBackend",
       method: "getFrameTemplate"
     }, function(response) {
       var body, element;
