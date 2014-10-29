@@ -21,7 +21,7 @@ todoControllers.controller('TodoListCtrl', ['$scope', 'app', 'Todo',
       # refresh all todos in scope
       if showNotifications
         allNotifications = _setLoadingStatus()
-      Todo.query((todos)->
+      Todo.query().$promise.then((todos)->
         $scope.todos = todos
         if showNotifications
           allNotifications.forEach((notification)->
@@ -41,8 +41,8 @@ todoControllers.controller('TodoListCtrl', ['$scope', 'app', 'Todo',
 
     $scope.createDeadLineHandler = (todo)->
       return (newDeadLine)->
-        todo.deadLine = newDeadLine
-        todo.$update()
+        todo.deadLine = moment(newDeadLine).utc().format()
+        todo.update()
 
     $scope.isDeadLineToday = (todo)->
       _deadLine = new Date(todo.deadLine)
@@ -56,18 +56,18 @@ todoControllers.controller('TodoListCtrl', ['$scope', 'app', 'Todo',
 
     $scope.updateTodo = (todo, callback=null, createNotification=true)->
       if createNotification
-        todo.notifier().add('Сохраняется...', 'loading') # we may don't remove notification because it will be
-        # not saved after todoo will be updated
-      todo.$update((todoData, getHeaders)->
+        loadingNotification = todo.notifier().add('Сохраняется...', 'loading')
+      todo.update((todoData)->
         app.tracker.sendEvent('Todos', 'Update todo', if createNotification then "with notification" else "without notification")
         if createNotification
+          loadingNotification.remove()
           todo.notifier().add('Сохранено', 'standart', $scope, 1000)
         if callback?
-          callback(todoData, getHeaders)
+          callback(todoData)
       )
 
     $scope.removeTodo = (todo)->
-      todo.$remove()
+      todo.remove()
       app.tracker.sendEvent('Todos', 'Remove todo', '')
       _removeItem($scope.todos, todo)
 ]);

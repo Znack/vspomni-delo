@@ -23,14 +23,6 @@
       return true;
     };
 
-    EmitterBackend.prototype.getTemplateForAnonymous = function(request, sendResponse) {
-      var templateForAnonymous;
-      templateForAnonymous = document.getElementById('anonymous-template');
-      return sendResponse({
-        template: templateForAnonymous.innerHTML
-      });
-    };
-
     return EmitterBackend;
 
   })(BaseBackend);
