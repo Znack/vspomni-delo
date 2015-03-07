@@ -1,0 +1,24 @@
+{
+  "env": "development",
+  "port": 3000,
+  "domain": "http://localhost:3000/",
+  "allowedDomains": ["*"],
+  "mongoose":{
+    "uri": "mongodb://localhost/todo",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session":{
+    "secret": "secret",
+    "key": "sid"
+  },
+  "passport": {
+    "vkontakteAppId": "ourAppId",
+    "vkontakteAppSecret": "secretIsHere"
+  }
+}
